@@ -1,12 +1,14 @@
 'use strict';
-function click(e) {
+
+
+function click() {
+  var input = document.querySelector("input");
+  var rolls = parseInt(input.value, 10) || 3;
   chrome.tabs.executeScript(null,
-      {code:"document.body.style.backgroundColor='" + e.target.id + "'"});
+      {code:"document.body.style.transition='transform " + rolls + "s'; document.body.style.transform='rotate(" + (rolls*360) + "deg)'"});
   window.close();
 }
+
 document.addEventListener('DOMContentLoaded', function () {
-  var divs = document.querySelectorAll('div');
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('click', click);
-  }
+  document.querySelector("button").addEventListener("click", click);
 });
