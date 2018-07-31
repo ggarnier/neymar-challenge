@@ -1,12 +1,17 @@
 {
   "name": "Neymar Challenge",
   "description": "Make any webpage do the Neymar Challenge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Guilherme Garnier <guilherme.garnier@gmail.com>",
   "homepage_url": "https://github.com/ggarnier/neymar-challenge",
   "permissions": [
     "activeTab"
   ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "browser_action": {
     "default_title": "Neymar Challenge",
     "default_icon": {
